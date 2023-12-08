@@ -7,7 +7,7 @@ function Nav() {
       <nav>
         <div className="navbar">
           <Link to="/">
-            <p onClick={goTop}>FÜGE</p>
+            <img src="" alt="Füge logo" />
           </Link>
           <ul>
             <li>

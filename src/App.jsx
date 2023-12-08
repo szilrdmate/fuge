@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import "../src/dist/styles.css";
+import "../src/Styles/styles.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
