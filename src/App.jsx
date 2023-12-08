@@ -3,14 +3,14 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import "../src/dist/styles.css";
-import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />}></Route>

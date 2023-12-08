@@ -1,9 +1,10 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-function About() {
+function Nav() {
   return (
     <>
-      <nav className={sticky ? "sticky-nav" : ""}>
+      <nav>
         <div className="navbar">
           <Link to="/">
             <p onClick={goTop}>FÜGE</p>
@@ -28,4 +29,4 @@ function About() {
   );
 }
 
-export default About;
+export default Nav;
