@@ -1,0 +1,11 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "home": {
+        "body": "Hellowassup"
+    }
+}

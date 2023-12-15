@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -8,24 +10,31 @@ const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+
+  const [t, i18n] = useTranslation("global")
+
+  const handleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  }
+
   return (
     <header>
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center w-18 h-auto">
         {/* Logo on the left */}
         <Link to="/" className="logo-link">
-          <img src="/assets/logo_white.svg" alt="Füge logo" />
+          <img src="src/assets/logo_white.svg" alt="Füge logo" />
         </Link>
 
         {/* Responsive Navigation Menu on the right */}
         <ul className="nav-links">
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to="/about">ABOUT</NavLink>
-          <NavLink to="/blog">BLOG</NavLink>
-          <NavLink to="/contact">CONTACT</NavLink>
+          <NavLink to="/">{t("header.home")}</NavLink>
+          <NavLink to="/about">{t("header.about")}</NavLink>
+          <NavLink to="/blog">{t("header.blog")}</NavLink>
+          <NavLink to="/contact">{t("header.contact")}</NavLink>
         </ul>
 
         {/* Hamburger Menu for small screens */}
-        <div className="relative">
+        <div className="mobile-menu-hamburger">
           <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -50,6 +59,8 @@ const Header = () => {
             </div>
           )}
         </div>
+        <button onClick={() => handleChangeLanguage("hu")}>Hu</button>
+        <button onClick={() => handleChangeLanguage("en")}>En</button>
       </div>
     </header>
   );
