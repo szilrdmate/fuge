@@ -1,11 +1,11 @@
 {
     "header": {
-        "home": "Kezdőlap",
-        "about": "Rólunk",
-        "blog": "Blog",
-        "contact": "Kapcsolat"
+        "home": "KEZDŐLAP",
+        "about": "RÓLUNK",
+        "blog": "BLOG",
+        "contact": "KAPCSOLAT"
     },
     "home": {
-        "body": "Helosziaszevasz"
+        "body": "HELOSZIASZEVASZ"
     }
 }

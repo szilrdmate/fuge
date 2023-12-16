@@ -1,11 +1,11 @@
 {
     "header": {
-        "home": "Home",
-        "about": "About",
-        "blog": "Blog",
-        "contact": "Contact"
+        "home": "HOME",
+        "about": "ABOUT",
+        "blog": "BLOG",
+        "contact": "CONTACT"
     },
     "home": {
-        "body": "Hellowassup"
+        "body": "HELLOWASSUP"
     }
 }

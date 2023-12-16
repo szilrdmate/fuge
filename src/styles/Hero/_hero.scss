@@ -1,33 +1,71 @@
 @use "../global/" as *;
 
 .hero-wrapper {
-    background-image: url('https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/04/11/15/bsc-hp-shopfront-2-1.jpg?width=1200');
-    width: 100%;
+    background-image: url('https://cdn.choosechicago.com/uploads/2022/11/2-0200-scaled-e1668009159934-1800x868.jpg');
+    background-position: center;
     height: 600px;
+    width: auto;
     background-size: cover;
-    max-width: 1200px;
-    margin: auto;
+    background-repeat: no-repeat;
+    margin: 0 3rem;
 }
 
 .grid-wrapper {
+    box-sizing: border-box;
     display: grid;
     gap: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1200px;
-    margin: 4rem auto;
+    padding: 3rem;
     .nested-grid {
         display: grid;
         gap: 3rem;
-        background-color: blue;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr;
-        .grid-item {
-            background-color: aqua;
+        grid-template-rows: 1fr 3fr;
+        &:first-child, &:last-child {
+
+            .grid-item:nth-child(2), .grid-item:nth-child(3) {
+                background-color: rgb(36, 10, 10);
+                padding: 2rem;
+                @include flex(column, center, center);
+            }
+            h1 {
+                font-size: $h4-size;
+                color: $white;
+            }
+            p {
+                color: $white;
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+        &:nth-child(2) {
+            .grid-item:nth-child(2), .grid-item:nth-child(3) {
+                background-color: rgb(243, 240, 225);
+                padding: 2rem;
+                @include flex(column, center, center);
+                h1 {
+                    font-size: $h4-size;
+                    color: $black;
+                }
+                p {
+                    color: $black;
+                    font-family: 'Poppins', sans-serif;
+                }
+            }
         }
         .grid-item {
-            &:nth-match(1) {
-                grid-row: 1 / span 1;
-                grid-column: 1 / 2;
+            @include flex(row, center, center);
+            border: 1px solid $black;
+            p {
+                text-align: justify;
+            }
+            &:first-child {
+                grid-row: 1 / 1;
+                grid-column: 1 / span 2;
+                border: 1px solid $black;
+                h1 {
+                    font-size: $h2-size;
+                    color: $black;
+                }
             }
             &:nth-child(2) {
                 grid-row: 2 / span 1;
@@ -39,4 +77,10 @@
             }
         }
     }
+}
+
+.social-wrapper {
+    height: 400px;
+    border: 1px solid $black;
+    margin: 0 3rem 3rem 3rem;
 }
