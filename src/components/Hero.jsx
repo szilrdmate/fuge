@@ -53,7 +53,7 @@ const Hero = () => {
             </div>
 
             <div id="social" className="social-wrapper">
-
+                
             </div>
         </>
     )
